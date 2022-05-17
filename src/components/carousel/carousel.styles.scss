@@ -1,0 +1,46 @@
+.carousel-container {
+  min-width: 400px;
+  width: 40vw;
+  // border: 1px solid black;
+  position: relative;
+  margin-right: 2rem;
+
+  .carousel {
+    width: 100%;
+    position: relative;
+
+    img {
+      width: 100%;
+    }
+  }
+  .carousel-controllers {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 2rem;
+
+    .button{
+        color:#5CC6D0;
+        height: 30px;
+        width: 30px;
+
+        &:hover{
+            background: white;
+        }
+    }
+    .indicators {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &-circle {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: black;
+        margin: 0px 10px;
+      }
+    }
+  }
+}

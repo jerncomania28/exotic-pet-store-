@@ -1,0 +1,29 @@
+.navigation-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    background: #FFFAF6;
+    padding: 20px;
+
+    .logo{
+        margin-left: 20px;
+    }
+
+
+    .nav-links{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        // width:50%;
+    }
+
+    .nav-links-container{
+        margin-right: 30px;
+        .nav-links-item{
+           margin: 0 20px;
+           color: #564741;
+        }
+    }
+}
