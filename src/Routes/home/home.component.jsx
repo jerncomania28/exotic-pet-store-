@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 //componnents
 import Carousel from "../../components/carousel/carousel.component";
 import Button from "../../components/buttons/button.component";
+import Card from "../../components/cards/card.component";
 
 //styles
 import "./home.styles.scss";
@@ -11,6 +12,9 @@ import "./home.styles.scss";
 import PetLove from "../../assets/pet.png";
 import Dog1 from "../../assets/Dog-1.svg";
 import Dog2 from "../../assets/Dog-2.svg";
+import { petAccessories } from "../../components/all-images /export-images";
+import { Services } from "../../components/all-images /export-images";
+import { packages } from "../../components/all-images /export-images";
 
 //icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -31,7 +35,7 @@ const Home = () => {
           </p>
           <div className="hero-section-content-buttons">
             <Link to="/signin">
-              <Button buttonType="pink" width="200px">
+              <Button buttonType="coloured" width="200px">
                 Sign In
               </Button>
             </Link>
@@ -88,16 +92,126 @@ const Home = () => {
         </div>
         <div className="pet-vacation-content">
           <h1 className="pet-vacation-content-header">
-            As You Take Vacation So Does Your Pet.
+            As You Take Vacation <br /> So Does Your Pet.
           </h1>
           <p className="pet-vacation-content-text">
             As a pet parent, Leaving your pets at home while you are on vacation
             or at work can be stressful. We offer proper treatment of your pet.
           </p>
           <div className="pet-vacation-content-icons">
-            <p><></>Pet Boarding</p>
-            <p>Pet DayCare</p>
-            <p>Pet Grooming</p>
+            <p>
+              <FontAwesomeIcon icon="house" className="icon-pink" /> Pet
+              Boarding
+            </p>
+            <p>
+              {" "}
+              <FontAwesomeIcon icon="briefcase" className="icon-blue" /> Pet
+              DayCare
+            </p>
+            <p>
+              <FontAwesomeIcon icon="briefcase" className="icon-yellow" />
+              Pet Grooming
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="pet-food-accessory">
+        <h1 className="pet-food-accessory-header">
+          {" "}
+          Order Now Pet Food And Accesory At Our Store Today
+        </h1>
+        <div className="pet-food-accessory-cards-container">
+          {petAccessories.map((item) => {
+            return (
+              <Card
+                className="pet-food-accessory-cards"
+                otherProperties={item}
+                key={item.id}
+              />
+            );
+          })}
+        </div>
+        <Button buttonType="coloured" width="300px">
+          Shop Now
+        </Button>
+      </div>
+      <div className="services">
+        <small>What We Do For You ?</small>
+        <h1 className="services-header">Our Services</h1>
+
+        <div className="services-container">
+          {Services.map((item) => {
+            return (
+              <Card
+                className="service-card"
+                otherProperties={item}
+                key={item.id}
+              />
+            );
+          })}
+        </div>
+      </div>
+      <div className="price">
+        <h1 className="price-header">The Best Choice For You</h1>
+        <p className="price-txt">
+          We offer long-term and short-term boarding. Every Pet has it’s own
+          private, spacious room and daily individual time in our large play
+          yard.
+        </p>
+        <div className="price-list">
+          <div className="basic">
+            <p className="basic-title">Basic</p>
+            <p className="basic-day-care">Day Care </p>
+            <h3 className="basic-price">NGN 20,000</h3>
+            <Button buttonType="pinkCard" width="250px">
+              Purcahse Now
+            </Button>
+            <div className="basic-packages">
+              {packages.map((item, index) => {
+                return (
+                  <p key={index}>
+                    <FontAwesomeIcon icon={['far', 'circle-check']} className="icon-pink" />
+                    {item}
+                  </p>
+                );
+              })}
+            </div>
+          </div>
+          <div className="exclusive">
+            <p className="exclusive-title">Exclusive</p>
+            <p className="exclusive-day-care">2X Care</p>
+            <h3 className="exclusive-price">NGN 40,000</h3>
+            <Button buttonType="yellowCard" width="250px">
+              Purcahse Now
+            </Button>
+            <div className="exclusive-packages">
+              {packages.map((item, index) => {
+                return (
+                  <p key={index}>
+                    <FontAwesomeIcon icon={['far', 'circle-check']} className="icon-yellow" />
+                    {item}
+                  </p>
+                );
+              })}
+            </div>
+          </div>
+          <div className="platinum">
+            <p className="platinum-title">Platinum</p>
+            <p className="platinum-day-care">4X Care</p>
+            <h3 className="platinum-price">NGN 100,000</h3>
+            <Button buttonType="blueCard" width="250px">
+              Purcahse Now
+            </Button>
+            <div className="platinum-packages">
+              {packages.map((item, index) => {
+                return (
+                  <p key={index}>
+                    <FontAwesomeIcon icon={['far', 'circle-check']} className="icon-blue" />
+                    {item}
+                  </p>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>

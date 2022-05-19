@@ -11,6 +11,7 @@ import "./index.scss";
 
 //icons
 import { library } from "@fortawesome/fontawesome-svg-core";
+import { far, faCircleCheck} from "@fortawesome/free-regular-svg-icons";
 import {
   faCircleChevronRight,
   faCircleChevronLeft,
@@ -19,7 +20,7 @@ import {
   faBriefcase
 } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faCircleChevronRight, faCircleChevronLeft ,faSquareCheck ,faHouse ,faBriefcase);
+library.add(far,faCircleChevronRight, faCircleChevronLeft ,faSquareCheck ,faHouse ,faBriefcase , faCircleCheck);
 
 const root = createRoot(document.getElementById("root"));
 

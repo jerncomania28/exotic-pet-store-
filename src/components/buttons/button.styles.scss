@@ -24,12 +24,57 @@
   color: #564741;
   border-radius: 30px;
   background: transparent;
-
 }
 
-.pink-inverted{
+.pink-inverted {
   border-radius: 30px;
-  color: pink;
+  color: #ffcc29;
   background: transparent;
   padding: 1rem;
+}
+
+.services-accessory {
+  border-radius: 14px;
+  padding: 0px;
+  width: 125px;
+  height: 36px;
+  color: white;
+  background: #f9a4ab;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.service-pet {
+  border-radius: 5px;
+  padding: 0px;
+  width: 125px;
+  height: 36px;
+  color: white;
+  background: #f9a4ab;
+  font-size: 12px;
+  line-height: 20px;
+  margin: 2rem 0rem;
+  margin-left: 1.5rem;
+  
+}
+
+.blue-card{
+  border-radius: 10px;
+  background:#5cc6d0;
+  color: #564741;
+  // padding: 1rem;
+  margin: 1rem auto;
+}
+
+.pink-card{
+  width: 80%;
+  margin: 1rem auto;
+  border-radius: 10px;
+  background: #f9a4ab;
+}
+.yellow-card{
+  width: 80%;
+  margin: 1rem auto;
+  border-radius: 10px;
+  background: #ffcc29;
 }
