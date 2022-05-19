@@ -4,7 +4,15 @@ const BUTTON_TYPES = {
   coloured: "coloured",
   pink: "pink",
   empty: "empty",
-  inverted: "pink-inverted"
+  inverted: "pink-inverted",
+  common : "services-accessory",
+  service : "service-pet",
+  blue : "blue",
+  pinkCard : "pink-card",
+  blueCard : "blue-card",
+  yellowCard: "yellow-card"
+
+  
 };
 
 const Button = ({ children, buttonType, width }) => {

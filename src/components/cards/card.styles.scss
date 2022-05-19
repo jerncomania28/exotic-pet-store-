@@ -1,0 +1,94 @@
+@mixin card-styles {
+  width: 340px;
+  //   border: 1px solid black;
+  // border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  margin: 1rem 1rem;
+  background: #ffffff;
+}
+@mixin img-styles{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0rem;
+    img {
+      width: 80%;
+    }
+}
+.pet-food-accessory-cards {
+    @include card-styles;
+  &-img-container {
+    @include img-styles;
+  }
+  &-inner-flex {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 1rem;
+    &-content {
+      h1 {
+        color: #564741;
+        font-size: 16px;
+        line-height: 26.67px;
+        margin-bottom: 10px;
+      }
+      p {
+        color: #5cc6d0;
+        font-size: 12px;
+        line-height: 20px;
+      }
+    }
+  }
+}
+
+.service-card {
+    @include card-styles;
+    justify-content: space-between;
+    padding: 0rem 0rem;
+    // border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    &-img-container{
+       @include img-styles;
+       position: relative;
+       padding: 0rem 0rem ;
+       img{
+           width: 100%;
+           border-radius: 10px 10px 0px 0px;
+       }
+       h1{
+           position: absolute;
+           bottom: 1.5rem;
+           left: 1rem;
+           font-size: 24px;
+           color:#ffffff;
+
+       }
+    }
+    &-inner-flex{
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+      // flex-direction: column;
+
+      &-content{
+        padding: 1rem 1rem;
+
+        p{
+          // margin: 1.5rem 0.5rem;
+          color: #564741;
+          text-align: left;
+          font-weight: 200;
+          font-size: 16px;
+          line-height: 30px;
+        }
+      }
+    }
+}
